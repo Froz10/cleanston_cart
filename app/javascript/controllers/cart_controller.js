@@ -25,4 +25,18 @@ export default class extends Controller {
       })
     }
   }
+
+  commit() {
+    fetch(`/cart/reset`, {
+      method: "POST",
+      headers: {
+        "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
+        "Accept": "text/html"
+      }
+    }).then(response => {
+      if (response.redirected) {
+        window.location.href = response.url
+      }
+    })
+  }
 }

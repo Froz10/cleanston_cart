@@ -1,7 +1,7 @@
 <div class="flex items-start border-b border-gray-200 pb-6" data-controller="item" data-item-id-value="<%= item.id %>">
   <div class="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-md overflow-hidden">
     <% if item.product.image_url.present? %>
-      <img src="<%= item.product.image_url %>" alt="<%= item.product.name %>" class="w-full h-full object-cover">
+      <img src="<%= asset_path item.product.image_url %>" alt="<%= item.product.name %>" class="w-full h-full object-cover">
     <% else %>
       <div class="w-full h-full flex items-center justify-center text-gray-400">
         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">

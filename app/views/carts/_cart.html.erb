@@ -22,7 +22,7 @@
     <span>Общая сумма</span>
     <span><%= number_to_currency(total, unit: "₽", format: "%n %u") %></span>
   </div>        
-  <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors">
+  <button data-action="click->cart#commit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors">
     Оформить заказ
   </button>
 </div>
