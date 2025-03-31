@@ -7,7 +7,7 @@ Things you may want to cover:
 
 * bundle install
 
-* rails db:migate
+* rails db:migrate
 
 * rails db:seed
 
