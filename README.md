@@ -5,20 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* bundle install
 
-* System dependencies
+* rails db:migate
 
-* Configuration
+* rails db:seed
 
-* Database creation
+* rails bin/dev
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
