@@ -13,11 +13,8 @@ export default class extends Controller {
         "Accept": "text/vnd.turbo-stream.html"
       },
       body: JSON.stringify({ cart_item: { quantity } })
-    })
-
-    if (response.redirected) {
-      window.location.href = response.url
-    }
+    }).then (response => response.text())
+    .then(html => Turbo.renderStreamMessage(html));
   }
 
   increase() {
@@ -40,11 +37,8 @@ export default class extends Controller {
           "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
           "Accept": "text/vnd.turbo-stream.html"
         }
-      })
-
-      if (response.redirected) {
-        window.location.href = response.url
-      }
+      }).then (response => response.text())
+      .then(html => Turbo.renderStreamMessage(html));
     }
   }
 }

@@ -1,0 +1,2 @@
+<%= turbo_stream.update @cart_item, partial: 'carts/cart_item', locals: {item: @cart_item} %>
+<%= turbo_stream.update 'cart', partial: 'carts/cart', locals: {cart: @cart_items, subtotal: @subtotal, total: @total, discount: @discount} %>

@@ -12,11 +12,11 @@ export default class extends Controller {
 
   reset() {
     if (confirm("Вы уверены, что хотите очистить корзину?")) {
-      fetch(this.data.get("reset-url"), {
+      fetch(`/cart/reset`, {
         method: "POST",
         headers: {
           "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
-          "Accept": "text/vnd.turbo-stream.html"
+          "Accept": "text/html"
         }
       }).then(response => {
         if (response.redirected) {
